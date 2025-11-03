@@ -1,8 +1,8 @@
 // import { Button } from "@/components/ui/button";
 import Image from "next/image";
 // import {  }
-import logo from "../app/logo.png";
-
+import logo from "../logo.png";
+  
 export default function Home() {
   return (
     <div>
