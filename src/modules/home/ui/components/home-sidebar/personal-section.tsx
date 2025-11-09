@@ -2,37 +2,39 @@
 import {
   SidebarGroup,
   SidebarGroupContent,
+  SidebarGroupLabel,
   SidebarMenu,
   SidebarMenuButton,
   SidebarMenuItem,
 } from "@/components/ui/sidebar";
 // as we are going to use hooks so that we can include use client
 
-import { FlameIcon, HomeIcon, PlaySquareIcon } from "lucide-react";
+import { FlameIcon, HistoryIcon, HomeIcon, ListVideoIcon, PlaySquareIcon, ThumbsUpIcon } from "lucide-react";
 import Link from "next/link";
 
 const items = [
   {
-    title: "Home",
-    url: "/",
-    icon: HomeIcon,
+    title: "History",
+    url: "/playlists/history",
+    icon: HistoryIcon,
   },
   {
-    title: "Subscription",
-    url: "/feed/subscriptions",
-    icon: PlaySquareIcon,
+    title: "Liked Videos",
+    url: "/playlists/liked",
+    icon: ThumbsUpIcon,
     auth: true,
   },
   {
-    title: "Trending",
-    url: "/feed/trending",
-    icon: FlameIcon,
+    title: "All playlists",
+    url: "/playlists",
+    icon: ListVideoIcon,
   },
 ];
 
-export const MainSection = () => {
+export const PersonalSection = () => {
   return (
     <SidebarGroup>
+        <SidebarGroupLabel>You</SidebarGroupLabel>
       <SidebarGroupContent>
         <SidebarMenu>
           {items.map((item) => (

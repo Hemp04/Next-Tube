@@ -1,4 +1,5 @@
 import { HomeLayout } from "@/modules/home/ui/layout/home-layout";
+import Home from "./page";
 
 
 interface LayoutProps {
